@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Квіз</title>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.iconscout.com/icon/premium/png-512-thumb/quiz-18-831952.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="home-box custome-box">
+      <h1 align="center">Квіз для розумників!</h1>
+      <br />
+      <h2><b>Інструкції:</b></h2>
+      <p>Всього запитань: <span class="total-question">5</span></p>
+
+      <br />
+      <button type="button" class="btn" onclick="startQuiz()">Почати</button>
+    </div>
+
+    <div class="quiz-box custome-box hide">
+      <div class="question-no"></div>
+      <div class="question-text"></div>
+      <div class="opt-container"></div>
+      <div class="next-question-btn">
+        <button type="button" class="btn" onclick="next()">Далі</button>
+      </div>
+      <div class="ans-indicator"></div>
+    </div>
+
+    <div class="result-box custome-box hide">
+      <h1>Результати</h1>
+      <table>
+        <tr>
+          <td>Всього запитань</td>
+          <td><span class="tot-question"></span></td>
+        </tr>
+        <tr>
+          <td>Дано відповідей</td>
+          <td><span class="tot-attempt"></span></td>
+        </tr>
+        <tr>
+          <td>Правильно</td>
+          <td><span class="tot-correct"></span></td>
+        </tr>
+        <tr>
+          <td>Неправильно</td>
+          <td><span class="tot-wrong"></span></td>
+        </tr>
+        <tr>
+          <td>У відсотках</td>
+          <td><span class="tot-percentage"></span></td>
+        </tr>
+        <tr>
+          <td>Підсумок</td>
+          <td><span class="tot-score"></span></td>
+        </tr>
+      </table>
+      <button type="button" class="btn" onclick="tryAgainQuiz()">
+        Спробувати знову
+      </button>
+      <button type="button" class="btn" onclick="goToHome()">На головну</button>
+    </div>
+    <footer class="cc">&copy; Гнатковський Олег, 11-Г</footer>
+
+    <script type="text/javascript" src="js/question.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
